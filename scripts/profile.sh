@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SERVICE_IP = http://13.125.170.39
+SERVICE_IP=http://13.125.170.39
 function find_idle_profile()
 {
     RESPONSE_CODE=$(sudo curl -s -o /dev/null -w "%{http_code}" $SERVICE_IP)
