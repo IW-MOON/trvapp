@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-SERVICE_IP=http://13.125.170.39
+SERVER_IP=http://13.125.170.39
 function find_idle_profile()
 {
-    RESPONSE_CODE=$(sudo curl -s -o /dev/null -w "%{http_code}" $SERVICE_IP)
+    RESPONSE_CODE=$(sudo curl -s -o /dev/null -w "%{http_code}" ${SERVER_IP})
 
     if [ ${RESPONSE_CODE} -ge 400 ] # 400 보다 크면 (즉, 40x/50x 에러 모두 포함)
     then
         CURRENT_PROFILE=real2
     else
-        CURRENT_PROFILE=$(sudo curl -s $SERVICE_IP)
+        CURRENT_PROFILE=$(sudo curl -s ${SERVER_IP})
     fi
 
     if [ ${CURRENT_PROFILE} == real1 ]
