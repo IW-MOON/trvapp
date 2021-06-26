@@ -1,12 +1,6 @@
 version: "3"
 services:
-  web:
-    image: nginx
-    container_name: nginx
-    ports:
-      - 80:80
-    volumes:
-      - /etc/nginx/:/etc/nginx/
+
   spring1:
     build: .
     image: spring
