@@ -14,6 +14,7 @@ public class HelloController {
 
     private final Environment env;
 
+
     @GetMapping("/")
     public String gyunny() {
         List<String> profile = Arrays.asList(env.getActiveProfiles());
