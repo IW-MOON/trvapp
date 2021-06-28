@@ -36,6 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
-*.yml
-*.sh
+/src/main/resources/application.yml
+/scripts/
 
+/.travis.yml
+/appspec.yml
